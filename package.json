@@ -24,6 +24,10 @@
   },
   "dependencies": {
     "html-webpack-plugin": "^5.5.0",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "vue": "^3.2.36",
+    "vue-compiler-sfc": "^0.0.0",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }

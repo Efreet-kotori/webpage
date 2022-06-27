@@ -2,6 +2,7 @@ const path = require("path");
 // 引入自动生成 html 的插件
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
   mode: "development",
   entry: "./src/main.js", // 入口
@@ -70,6 +71,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+      },
     ],
   },
   plugins: [
@@ -78,5 +83,6 @@ module.exports = {
       filename: "index.html", // 生成文件的名称
     }),
     new CleanWebpackPlugin(),
+    new VueLoaderPlugin(),
   ],
 };
